@@ -5,11 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs";
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    ,
-    }:
+  outputs = { self, nixpkgs }:
     let
       pkgs = import nixpkgs {
         system = "x86_64-linux";
