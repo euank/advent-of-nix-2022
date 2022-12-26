@@ -46,6 +46,9 @@ let
         in
         if h == (head t) then dedupeSorted ([h] ++ (tail t))
         else [h] ++ (dedupeSorted t);
+
+      # flatten, but only 1 layer deep
+      flatten1 = ll: foldl' (out: el: out ++ el) [] ll;
     };
 
     heap = import ./heap.nix { inherit pkgs lib; };
