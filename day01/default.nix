@@ -1,8 +1,5 @@
-{ lib
-, pkgs
-,
-}:
-with lib; let
+{ lib, pkgs }:
+with pkgs.lib; let
   # part 1
   parseInput = file: map (ss: map toInt (splitString "\n" ss)) (splitString "\n\n" (fileContents file));
 

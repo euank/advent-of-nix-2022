@@ -1,5 +1,5 @@
 { lib, pkgs }:
-with lib;
+with pkgs.lib;
 let
   # part 1
   charToNum = c:
