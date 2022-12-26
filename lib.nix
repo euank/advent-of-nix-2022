@@ -47,6 +47,8 @@ let
         if h == (head t) then dedupeSorted ([h] ++ (tail t))
         else [h] ++ (dedupeSorted t);
     };
+
+    heap = import ./heap.nix { inherit pkgs lib; };
   };
 in
 lib
