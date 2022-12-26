@@ -1,6 +1,5 @@
 { lib, pkgs }:
 with lib; with pkgs.lib; let
-
   input = fileContents ./input;
 
   parseOperation = opLine:

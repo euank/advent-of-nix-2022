@@ -15,6 +15,7 @@
     in
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+      inherit lib;
     }
     // (pkgs.lib.mapAttrs (name: _: import ./${name} { inherit pkgs lib; }) dayDirs);
 }
